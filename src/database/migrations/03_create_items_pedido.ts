@@ -1,7 +1,7 @@
 import Knex from 'knex';
 
 export async function up(knex: Knex) {
-    return knex.schema.createTable('pedido', table => {
+    return knex.schema.createTable('item_pedido', table => {
         table.string('codPedido').references('pedido').inTable('codPedido');
         table.string('codProduto').references('produto').inTable('codProduto');
         table.string('qunatidade').notNullable();
@@ -11,5 +11,5 @@ export async function up(knex: Knex) {
 }
 
 export async function down(knex: Knex) {
-    return knex.schema.dropTable('pedido');
+    return knex.schema.dropTable('item_pedido');
 }

@@ -10,5 +10,6 @@ module.exports = {
     },    
     useNullAsDefault: true
 };  
+
 //executar comendo na pasta ServerCompras
 //npx knex migrate:latest --knexfile knexfile.ts migrate:latest
